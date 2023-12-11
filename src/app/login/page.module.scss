@@ -1,0 +1,151 @@
+.pageContent {
+	width: 100dvw;
+	height: 100dvh;
+	display: flex;
+
+	.loginSection {
+		width: 100%;
+		position: relative;
+		z-index: 2;
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+
+		&::before {
+			position: absolute;
+			content: "";
+			background: #f0f0f0;
+			height: 100dvh;
+			top: 0;
+			bottom: 0;
+			width: 7dvw;
+			right: 0;
+			transform: translateX(50%) skewX(-5deg);
+			z-index: -1;
+			box-shadow: 50px 0 50px 0 rgba(0, 0, 0, 0.35);
+		}
+
+		.homeButton {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			text-decoration: none;
+			width: fit-content;
+
+			.icon {
+				$size: 42px;
+
+				width: $size;
+				height: $size;
+				border-radius: 10px;
+			}
+
+			.text {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				&__title {
+					font-size: 1.2rem;
+					font-weight: 700;
+					color: #1c1c1c;
+				}
+
+				&__subtitle {
+					font-size: 0.8rem;
+					font-weight: 500;
+					color: #3f3f3f;
+				}
+			}
+		}
+
+		.title {
+			font-size: 2.5rem;
+			font-weight: 900;
+			color: #000000;
+			margin-bottom: 1rem;
+		}
+
+		.loginForm {
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			.field {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+
+				.label {
+					margin-inline: 5px;
+					color: #888888;
+					font-size: 0.65rem;
+					text-transform: uppercase;
+					font-weight: 500;
+				}
+
+				.inline {
+					display: flex;
+					width: 100%;
+					border: 1px solid #b3b3b3;
+					border-radius: 5px;
+					background: #ffffff;
+
+					.inputField {
+						border: none;
+						background: none;
+						height: 100%;
+						width: 100%;
+						outline: none;
+						padding: 7.5px 10px;
+						font-size: 1rem;
+						color: #262626;
+					}
+
+					.passwordVisibleButton {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: none;
+						border: none;
+						margin-inline: 10px;
+						color: #262626;
+					}
+				}
+
+				.link {
+					font-size: 0.75rem;
+					color: #5c32e7;
+					text-decoration: none;
+					width: fit-content;
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+
+			.submitButton {
+				$background: #5c32e7;
+
+				padding: 12px;
+				color: #ffffff;
+				background: $background;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: 200ms ease;
+
+				&:hover {
+					background: darken($background, 15);
+				}
+			}
+		}
+	}
+
+	.background {
+		height: 100%;
+	}
+}
