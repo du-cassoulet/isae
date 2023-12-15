@@ -31,42 +31,25 @@ const plans = [
 		price: 49.99,
 	},
 	{
-		title: "Gold Pass",
+		title: "Iron Pass",
 		aspects: {
-			positives: [
-				"Détecte vos traces sur internet.",
-				"Détecte les usurpations d'identité.",
-				"Service prioritaire",
-			],
+			positives: ["Service prioritaire"],
 			negatives: ["Pas de remboursement possible", "Liste d'attente"],
 		},
 		price: 99.99,
 	},
 	{
-		title: "VIP",
+		title: "Silver Pass",
 		aspects: {
-			positives: [
-				"Détecte vos traces sur internet.",
-				"Détecte les usurpations d'identité.",
-				"Service prioritaire",
-				"Avocats spécialisés",
-				"Remboursement possible",
-			],
-			negatives: [],
+			positives: ["Avocats spécialisés", "Remboursement possible"],
+			negatives: ["File d'attente"],
 		},
 		price: 249.99,
 	},
 	{
-		title: "VIP+",
+		title: "Gold Pass",
 		aspects: {
-			positives: [
-				"Détecte vos traces sur internet.",
-				"Détecte les usurpations d'identité.",
-				"Service prioritaire",
-				"Remboursement possible",
-				"Avocats spécialisés",
-				"Démarche express",
-			],
+			positives: ["Démarche express", "Service 24/7", "Protection totale"],
 			negatives: [],
 		},
 		price: 499.99,
@@ -74,6 +57,7 @@ const plans = [
 ];
 
 const mostPopular = 2;
+const gold = 4;
 
 export default function Pricing() {
 	return (
@@ -92,7 +76,13 @@ export default function Pricing() {
 					{plans.map((plan, key) => (
 						<motion.article
 							key={key}
-							className={mostPopular === key ? style.popularPlan : style.plan}
+							className={
+								mostPopular === key
+									? style.popularPlan
+									: gold === key
+									? style.goldPlan
+									: style.plan
+							}
 							initial={{ opacity: 0, y: 100 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.2 * key }}

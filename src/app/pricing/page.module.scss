@@ -13,16 +13,17 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: repeat(2, 1fr);
-		gap: 1rem;
+		gap: 1.5rem;
 
 		.plan,
-		.popularPlan {
+		.popularPlan,
+		.goldPlan {
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;
 			padding: 1.5rem;
 			border-radius: 5px;
-			background: #d8d8d8;
+			background: #ffffff;
 			border: 1px solid #a3a3a3;
 			position: relative;
 
@@ -105,6 +106,25 @@
 				padding: 8px 12px;
 				border-radius: 5px;
 				content: "Le plus populaire";
+				position: absolute;
+				transform: translate(-50%, -50%);
+				top: 0;
+				left: 50%;
+				color: #ffffff;
+				font-size: 0.75rem;
+			}
+		}
+
+		.goldPlan {
+			border: 1px solid #f5a623;
+			background: linear-gradient(135deg, #f8f0a0 0%, #f1d98b 100%);
+			box-shadow: 0px 0px 35px 0px #f9f087;
+
+			&::before {
+				background: #f5a623;
+				padding: 8px 12px;
+				border-radius: 5px;
+				content: "Le plus complet";
 				position: absolute;
 				transform: translate(-50%, -50%);
 				top: 0;

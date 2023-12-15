@@ -20,14 +20,22 @@ export default function Home() {
 				<div>
 					<h1 className={style.title}>ISAE</h1>
 					<h3 className={style.subtitle}>Erase your footsteps</h3>
+					<p className={style.motto}>
+						<span className={style.motto__elem}>
+							<strong>I</strong>dentity
+						</span>
+						<span className={style.motto__elem}>
+							<strong>S</strong>ecurity
+						</span>
+						<span className={style.motto__elem}>
+							<strong>A</strong>nonymity
+						</span>
+						<span className={style.motto__elem}>
+							<strong>E</strong>-Reputation
+						</span>
+					</p>
 				</div>
 				<div className={style.right}>
-					<p className={style.motto}>
-						<span className={style.motto__elem}>Identity</span>
-						<span className={style.motto__elem}>Security</span>
-						<span className={style.motto__elem}>Anonymity</span>
-						<span className={style.motto__elem}>E-Reputation</span>
-					</p>
 					<div className={style.buttons}>
 						<Link href="/login?t=register" className={style.button}>
 							S'inscrire Gratuitement

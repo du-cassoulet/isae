@@ -16,7 +16,25 @@
 	.subtitle {
 		font-size: 1.5rem;
 		font-weight: 500;
-		color: #ffffffaa;
+		color: #ffffffcc;
+	}
+
+	.motto {
+		display: flex;
+		gap: 0.5rem;
+		margin-top: 1rem;
+
+		&__elem {
+			font-size: 1rem;
+			font-weight: 500;
+			color: #ffffffaa;
+			font-style: italic;
+			text-align: right;
+
+			strong {
+				color: #ffffff;
+			}
+		}
 	}
 
 	.right {
@@ -47,20 +65,6 @@
 				&:hover {
 					background: darken($background, 10%);
 				}
-			}
-		}
-
-		.motto {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 0.5rem 2rem;
-
-			&__elem {
-				font-size: 1.5rem;
-				font-weight: 500;
-				color: #ffffffaa;
-				font-style: italic;
-				text-align: right;
 			}
 		}
 
